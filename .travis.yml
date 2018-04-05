@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - "9"
+ 
+script:
+  - yarn run test:cover
+
+after_script: 
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token yarn run coveralls
+
+cache: yarn
